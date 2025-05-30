@@ -1,4 +1,4 @@
-package com.example.selenium;
+package com.example.selenium.testcases;
 import java.time.Duration;
 import java.util.*;
  
@@ -10,11 +10,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.example.selenium.setup.TCASetup;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
  
 
-public class SeleniumTest {
+public class TCA1 {
 
     static Map<String, String> scenarioCodeDict = Map.of(
             "HDP Remarks and Conduct", "04",
@@ -27,12 +30,21 @@ public class SeleniumTest {
     static boolean breaker = false;
     static long sleepduration = 1000; // 1 second
 
-    public static void main(String[] args) {
-        while (!breaker) {
-            runTest();
-        }
-    }
+    public static void run(WebDriver driver, WebDriverWait wait) throws InterruptedException {
+        System.out.println("TCA1 START");
+        // Run scenarios
+        String[] scenarios = {"HDP Remarks and Conduct", "Personal Qualities", "Subject Grade", "Subject Remarks", "Subject Results"};
+        String[] lockTypes = {"By Level", "By Class"};
 
+        for (String scenario : scenarios) {
+            for (String lock : lockTypes) {
+                TCA1_1(scenario, lock, driver, wait);
+            }
+        }
+
+        System.out.println("All Tests Passed");
+        System.out.println("✅ TCA1 END");
+    }
     public static void runTest() {
         WebDriver driver = null;
         try {
@@ -62,7 +74,7 @@ public class SeleniumTest {
 
             for (String scenario : scenarios) {
                 for (String lock : lockTypes) {
-                    TCA1(scenario, lock, driver, wait);
+                    TCA1_1(scenario, lock, driver, wait);
                 }
             }
 
@@ -86,17 +98,8 @@ public class SeleniumTest {
         } catch (Exception ignored) {}
     }
 
-    public static void TCA1(String scenario, String lockSetup, WebDriver driver, WebDriverWait wait) throws InterruptedException {
-        wait.until(ExpectedConditions.titleContains("Academic"));
-        wait.until(d -> driver.findElements(By.cssSelector("a.site-menu-btn")).size() > 1);
-        
-        List<WebElement> menuBtns = driver.findElements(By.cssSelector("a.site-menu-btn"));
-        menuBtns.get(1).click();
-        Thread.sleep(sleepduration); 
-        WebElement cutoffLink = wait.until(ExpectedConditions.elementToBeClickable(
-            By.xpath("//li[contains(@class, 'child-module')]//a[contains(normalize-space(), 'Cut-Off')]")
-        ));
-        cutoffLink.click();
+    public static void TCA1_1(String scenario, String lockSetup, WebDriver driver, WebDriverWait wait) throws InterruptedException {
+        TCASetup.navigateToResultsByClass(driver, wait, "//li[contains(@class, 'child-module')]//a[contains(normalize-space(), 'Cut-Off')]");
         Thread.sleep(sleepduration);
         System.out.println("Results Cutoff page chosen");
 
