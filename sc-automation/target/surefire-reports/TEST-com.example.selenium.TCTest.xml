@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="3" failures="1" name="com.example.selenium.TCTest" time="216.783" errors="0" skipped="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="21.0.7+8-LTS-245"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\jdk-21.0.7\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\qianchen.jiang\sc-academic-ui\java_tests\sc-automation"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\qianchen.jiang\sc-academic-ui\java_tests\sc-automation"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="groups" value="tca11"/>
+    <property name="java.runtime.version" value="21.0.7+8-LTS-245"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\QIANCH~1.JIA\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="stderr.encoding" value="cp437"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="classworlds.conf" value="C:\Users\qianchen.jiang\Personal\apache-maven-3.8.6\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="stdout.encoding" value="cp437"/>
+    <property name="java.library.path" value="C:\Program Files\jdk-21.0.7\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\jdk-21.0.7\bin;C:\Users\qianchen.jiang\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\qianchen.jiang\AppData\Local\Programs\Python\Python313\;C:\Users\qianchen.jiang\AppData\Local\Programs\Python\Launcher\;C:\Users\qianchen.jiang\AppData\Local\Microsoft\WindowsApps;C:\Users\qianchen.jiang\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\qianchen.jiang\AppData\Local\GitHubDesktop\bin;C:\Users\qianchen.jiang\AppData\Roaming\npm;C:\Users\qianchen.jiang\AppData\Local\Programs\Git\cmd;C:\Users\qianchen.jiang\Personal\chromedriver-win64;C:\Users\qianchen.jiang\Personal\edgedriver_win64;C:\Users\qianchen.jiang\Personal\apache-maven-3.8.6\bin;;."/>
+    <property name="maven.conf" value="C:\Users\qianchen.jiang\Personal\apache-maven-3.8.6/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Users\qianchen.jiang\Personal\apache-maven-3.8.6\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\qianchen.jiang"/>
+    <property name="user.timezone" value="Asia/Singapore"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="21"/>
+    <property name="user.name" value="qianchen.jiang"/>
+    <property name="java.class.path" value="C:\Users\qianchen.jiang\Personal\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dgroups=tca11"/>
+    <property name="java.home" value="C:\Program Files\jdk-21.0.7"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="21.0.7"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\qianchen.jiang\Personal\apache-maven-3.8.6"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.example.selenium.TCTest" name="runTCA11" time="131.602">
+    <skipped/>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@6cc4c815
+✅ Login successful
+✅ Bypassed warning page
+
+✅ Navigated to Results by Class page
+✅ level nav tab accessed
+✅ level chosen
+✅ class chosen
+✅ subject chosen
+✅ assessment dropdown opened
+✅ assessment dropdown opened
+TCA11.1.1 successful
+✅ term 1 expanded/collasped
+❌ No input for row: Reg#
+Student
+ TERM 1 WA (15%)   
+TERM 1 WA - 1
+Max: 20 (100%)
+TERM 1 WA
+%
+Grade
+  TERM 2 WA
+%
+Grade
+SEMESTER 1
+%
+Grade
+  TERM 3 WA
+%
+Grade
+  End-of-year Exam
+%
+Grade
+SEMESTER 2
+%
+Grade
+OVERALL
+%
+Grade
+❌ No input for row: 
+✅ Inputted marks: 7 for row: 1
+STUDENT 9990 00000027915798
+45
+D7
+67
+B3
+56
+C5
+0
+9
+20
+9
+16
+9
+28
+9
+✅ Inputted marks: 5 for row: 2
+STUDENT 9990 00000027915799
+20
+9
+50
+C6
+35
+9
+14
+9
+14
+9
+14
+9
+20
+9
+✅ Inputted marks: 8 for row: 3
+STUDENT 9990 00000027915800
+20
+9
+23
+9
+22
+9
+12
+9
+15
+9
+14
+9
+17
+9
+✅ Inputted marks: 19 for row: 4
+STUDENT 9990 00000027915801
+30
+9
+13
+9
+22
+9
+6
+9
+17
+9
+15
+9
+17
+9
+✅ Inputted marks: 0 for row: 5
+STUDENT 9990 00000027915802
+25
+9
+63
+B4
+44
+E8
+2
+9
+10
+9
+8
+9
+19
+9
+✅ Inputted marks: 19 for row: 6
+STUDENT 9990 00000027915803
+10
+9
+20
+9
+15
+9
+4
+9
+6
+9
+6
+9
+8
+9
+✅ Inputted marks: 19 for row: 7
+STUDENT 9990 00000027915804
+15
+9
+30
+9
+23
+9
+38
+9
+18
+9
+22
+9
+22
+9
+✅ Inputted marks: 18 for row: 8
+STUDENT 9990 00000027915805
+45
+D7
+10
+9
+28
+9
+20
+9
+17
+9
+18
+9
+21
+9
+✅ Inputted marks: 16 for row: 9
+STUDENT 9990 00000027915806
+5
+9
+53
+C6
+29
+9
+40
+E8
+17
+9
+22
+9
+24
+9
+✅ Inputted marks: 19 for row: 10
+STUDENT 9990 00000027915807
+85
+A1
+43
+E8
+64
+B4
+20
+9
+7
+9
+10
+9
+26
+9
+✅ Inputted marks: 7 for row: 11
+STUDENT 9990 00000027915808
+25
+9
+17
+9
+21
+9
+18
+9
+7
+9
+9
+9
+13
+9
+✅ Inputted marks: 13 for row: 12
+STUDENT 9990 00000027915809
+0
+9
+47
+D7
+24
+9
+18
+9
+13
+9
+14
+9
+17
+9
+✅ Inputted marks: 12 for row: 13
+STUDENT 9990 00000027915810
+30
+9
+40
+E8
+35
+9
+20
+9
+5
+9
+8
+9
+16
+9
+✅ Inputted marks: 3 for row: 14
+STUDENT 9990 00000027915811
+55
+C5
+20
+9
+38
+9
+4
+9
+14
+9
+12
+9
+20
+9
+✅ Inputted marks: 12 for row: 15
+STUDENT 9990 00000027915812
+85
+A1
+23
+9
+54
+C6
+14
+9
+9
+9
+10
+9
+23
+9
+✅ Inputted marks: 7 for row: 16
+STUDENT 9990 00000027915813
+70
+A2
+0
+9
+35
+9
+8
+9
+20
+9
+17
+9
+23
+9
+✅ Inputted marks: 13 for row: 17
+STUDENT 9990 00000027915814
+45
+D7
+3
+9
+24
+9
+32
+9
+14
+9
+18
+9
+20
+9
+✅ Inputted marks: 13 for row: 18
+STUDENT 9990 00000027915815
+15
+9
+7
+9
+11
+9
+12
+9
+3
+9
+5
+9
+7
+9
+✅ Inputted marks: 19 for row: 19
+STUDENT 9990 00000027915816
+90
+A1
+60
+B4
+75
+A1
+26
+9
+5
+9
+10
+9
+29
+9
+✅ Inputted marks: 10 for row: 20
+STUDENT 9990 00000027915817
+75
+A1
+10
+9
+43
+E8
+18
+9
+5
+9
+8
+9
+18
+9
+✅ Inputted marks: 18 for row: 21
+STUDENT 9990 00000027915818
+45
+D7
+30
+9
+38
+9
+36
+9
+15
+9
+20
+9
+25
+9
+✅ Inputted marks: 17 for row: 22
+STUDENT 9990 00000027915819
+75
+A1
+60
+B4
+68
+B3
+26
+9
+18
+9
+20
+9
+34
+9
+✅ Inputted marks: 5 for row: 23
+STUDENT 9990 00000027915820
+40
+E8
+27
+9
+34
+9
+26
+9
+7
+9
+11
+9
+18
+9
+✅ Inputted marks: 6 for row: 24
+STUDENT 9990 00000027915821
+5
+9
+33
+9
+19
+9
+20
+9
+8
+9
+11
+9
+13
+9
+✅ Inputted marks: 5 for row: 25
+STUDENT 9990 00000027915822
+65
+B3
+53
+C6
+59
+C5
+28
+9
+15
+9
+18
+9
+30
+9
+✅ Inputted marks: 19 for row: 26
+STUDENT 9990 00000027915823
+75
+A1
+57
+C5
+66
+B3
+2
+9
+0
+9
+0
+9
+20
+9
+✅ Inputted marks: 13 for row: 27
+STUDENT 9990 00000027915824
+0
+9
+37
+9
+19
+9
+4
+9
+14
+9
+12
+9
+14
+9
+✅ Inputted marks: 2 for row: 28
+STUDENT 9990 00000027915825
+60
+B4
+23
+9
+42
+E8
+26
+9
+10
+9
+13
+9
+22
+9
+✅ Inputted marks: 14 for row: 29
+STUDENT 9990 00000027915826
+0
+9
+53
+C6
+27
+9
+40
+E8
+13
+9
+19
+9
+21
+9
+✅ Inputted marks: 16 for row: 30
+STUDENT 9990 00000027915827
+30
+9
+0
+9
+15
+9
+40
+E8
+5
+9
+13
+9
+13
+9
+✅ Marks saved
+✅ term 1 expanded/collasped
+✅ Term 1 processed
+✅ term 2 expanded/collasped
+❌ No input for row: Reg#
+Student
+  TERM 1 WA
+%
+Grade
+ TERM 2 WA (15%)   
+TERM 2 WA - 1
+Max: 30 (100%)
+TERM 2 WA
+%
+Grade
+SEMESTER 1
+%
+Grade
+  TERM 3 WA
+%
+Grade
+  End-of-year Exam
+%
+Grade
+SEMESTER 2
+%
+Grade
+OVERALL
+%
+Grade
+❌ No input for row: 
+✅ Inputted marks: 10 for row: 1
+STUDENT 9990 00000027915798
+45
+D7
+67
+B3
+56
+C5
+0
+9
+20
+9
+16
+9
+28
+9
+✅ Inputted marks: 14 for row: 2
+STUDENT 9990 00000027915799
+20
+9
+50
+C6
+35
+9
+14
+9
+14
+9
+14
+9
+20
+9
+✅ Inputted marks: 5 for row: 3
+STUDENT 9990 00000027915800
+20
+9
+23
+9
+22
+9
+12
+9
+15
+9
+14
+9
+17
+9
+✅ Inputted marks: 3 for row: 4
+STUDENT 9990 00000027915801
+30
+9
+13
+9
+22
+9
+6
+9
+17
+9
+15
+9
+17
+9
+✅ Inputted marks: 9 for row: 5
+STUDENT 9990 00000027915802
+25
+9
+63
+B4
+44
+E8
+2
+9
+10
+9
+8
+9
+19
+9
+✅ Inputted marks: 14 for row: 6
+STUDENT 9990 00000027915803
+10
+9
+20
+9
+15
+9
+4
+9
+6
+9
+6
+9
+8
+9
+✅ Inputted marks: 17 for row: 7
+STUDENT 9990 00000027915804
+15
+9
+30
+9
+23
+9
+38
+9
+18
+9
+22
+9
+22
+9
+✅ Inputted marks: 16 for row: 8
+STUDENT 9990 00000027915805
+45
+D7
+10
+9
+28
+9
+20
+9
+17
+9
+18
+9
+21
+9
+✅ Inputted marks: 7 for row: 9
+STUDENT 9990 00000027915806
+5
+9
+53
+C6
+29
+9
+40
+E8
+17
+9
+22
+9
+24
+9
+✅ Inputted marks: 3 for row: 10
+STUDENT 9990 00000027915807
+85
+A1
+43
+E8
+64
+B4
+20
+9
+7
+9
+10
+9
+26
+9
+✅ Inputted marks: 19 for row: 11
+STUDENT 9990 00000027915808
+25
+9
+17
+9
+21
+9
+18
+9
+7
+9
+9
+9
+13
+9
+✅ Inputted marks: 12 for row: 12
+STUDENT 9990 00000027915809
+0
+9
+47
+D7
+24
+9
+18
+9
+13
+9
+14
+9
+17
+9
+✅ Inputted marks: 17 for row: 13
+STUDENT 9990 00000027915810
+30
+9
+40
+E8
+35
+9
+20
+9
+5
+9
+8
+9
+16
+9
+✅ Inputted marks: 17 for row: 14
+STUDENT 9990 00000027915811
+55
+C5
+20
+9
+38
+9
+4
+9
+14
+9
+12
+9
+20
+9
+✅ Inputted marks: 0 for row: 15
+STUDENT 9990 00000027915812
+85
+A1
+23
+9
+54
+C6
+14
+9
+9
+9
+10
+9
+23
+9
+✅ Inputted marks: 13 for row: 16
+STUDENT 9990 00000027915813
+70
+A2
+0
+9
+35
+9
+8
+9
+20
+9
+17
+9
+23
+9
+✅ Inputted marks: 12 for row: 17
+STUDENT 9990 00000027915814
+45
+D7
+3
+9
+24
+9
+32
+9
+14
+9
+18
+9
+20
+9
+✅ Inputted marks: 0 for row: 18
+STUDENT 9990 00000027915815
+15
+9
+7
+9
+11
+9
+12
+9
+3
+9
+5
+9
+7
+9
+✅ Inputted marks: 4 for row: 19
+STUDENT 9990 00000027915816
+90
+A1
+60
+B4
+75
+A1
+26
+9
+5
+9
+10
+9
+29
+9
+✅ Inputted marks: 7 for row: 20
+STUDENT 9990 00000027915817
+75
+A1
+10
+9
+43
+E8
+18
+9
+5
+9
+8
+9
+18
+9
+✅ Inputted marks: 3 for row: 21
+STUDENT 9990 00000027915818
+45
+D7
+30
+9
+38
+9
+36
+9
+15
+9
+20
+9
+25
+9
+✅ Inputted marks: 15 for row: 22
+STUDENT 9990 00000027915819
+75
+A1
+60
+B4
+68
+B3
+26
+9
+18
+9
+20
+9
+34
+9
+✅ Inputted marks: 15 for row: 23
+STUDENT 9990 00000027915820
+40
+E8
+27
+9
+34
+9
+26
+9
+7
+9
+11
+9
+18
+9
+✅ Inputted marks: 16 for row: 24
+STUDENT 9990 00000027915821
+5
+9
+33
+9
+19
+9
+20
+9
+8
+9
+11
+9
+13
+9
+✅ Inputted marks: 11 for row: 25
+STUDENT 9990 00000027915822
+65
+B3
+53
+C6
+59
+C5
+28
+9
+15
+9
+18
+9
+30
+9
+✅ Inputted marks: 17 for row: 26
+STUDENT 9990 00000027915823
+75
+A1
+57
+C5
+66
+B3
+2
+9
+0
+9
+0
+9
+20
+9
+✅ Inputted marks: 5 for row: 27
+STUDENT 9990 00000027915824
+0
+9
+37
+9
+19
+9
+4
+9
+14
+9
+12
+9
+14
+9
+✅ Inputted marks: 10 for row: 28
+STUDENT 9990 00000027915825
+60
+B4
+23
+9
+42
+E8
+26
+9
+10
+9
+13
+9
+22
+9
+✅ Inputted marks: 1 for row: 29
+STUDENT 9990 00000027915826
+0
+9
+53
+C6
+27
+9
+40
+E8
+13
+9
+19
+9
+21
+9
+✅ Inputted marks: 11 for row: 30
+STUDENT 9990 00000027915827
+30
+9
+0
+9
+15
+9
+40
+E8
+5
+9
+13
+9
+13
+9
+✅ Marks saved
+✅ term 2 expanded/collasped
+✅ Term 2 processed
+✅ term 3 expanded/collasped
+❌ No input for row: Reg#
+Student
+  TERM 1 WA
+%
+Grade
+ TERM 2 WA (15%)   
+TERM 2 WA - 1
+Max: 30 (100%)
+TERM 2 WA
+%
+Grade
+SEMESTER 1
+%
+Grade
+  TERM 3 WA
+%
+Grade
+  End-of-year Exam
+%
+Grade
+❌ No input for row: 
+✅ Inputted marks: 0 for row: 1
+STUDENT 9990 00000027915798
+45
+D7
+67
+B3
+56
+C5
+0
+9
+20
+9
+✅ Inputted marks: 10 for row: 2
+STUDENT 9990 00000027915799
+20
+9
+50
+C6
+35
+9
+14
+9
+14
+9
+✅ Inputted marks: 13 for row: 3
+STUDENT 9990 00000027915800
+20
+9
+23
+9
+22
+9
+12
+9
+15
+9
+✅ Inputted marks: 7 for row: 4
+STUDENT 9990 00000027915801
+30
+9
+13
+9
+22
+9
+6
+9
+17
+9
+✅ Inputted marks: 8 for row: 5
+STUDENT 9990 00000027915802
+25
+9
+63
+B4
+44
+E8
+2
+9
+10
+9
+✅ Inputted marks: 11 for row: 6
+STUDENT 9990 00000027915803
+10
+9
+20
+9
+15
+9
+4
+9
+6
+9
+✅ Inputted marks: 17 for row: 7
+STUDENT 9990 00000027915804
+15
+9
+30
+9
+23
+9
+38
+9
+18
+9
+✅ Inputted marks: 3 for row: 8
+STUDENT 9990 00000027915805
+45
+D7
+10
+9
+28
+9
+20
+9
+17
+9
+✅ Inputted marks: 10 for row: 9
+STUDENT 9990 00000027915806
+5
+9
+53
+C6
+29
+9
+40
+E8
+17
+9
+✅ Inputted marks: 3 for row: 10
+STUDENT 9990 00000027915807
+85
+A1
+43
+E8
+64
+B4
+20
+9
+7
+9
+✅ Inputted marks: 19 for row: 11
+STUDENT 9990 00000027915808
+25
+9
+17
+9
+21
+9
+18
+9
+7
+9
+✅ Inputted marks: 2 for row: 12
+STUDENT 9990 00000027915809
+0
+9
+47
+D7
+24
+9
+18
+9
+13
+9
+✅ Inputted marks: 15 for row: 13
+STUDENT 9990 00000027915810
+30
+9
+40
+E8
+35
+9
+20
+9
+5
+9
+✅ Inputted marks: 11 for row: 14
+STUDENT 9990 00000027915811
+55
+C5
+20
+9
+38
+9
+4
+9
+14
+9
+✅ Inputted marks: 6 for row: 15
+STUDENT 9990 00000027915812
+85
+A1
+23
+9
+54
+C6
+14
+9
+9
+9
+🔁 Retrying runTCA11 (attempt 2)
+</system-out>
+    <system-err>SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+May 29, 2025 5:46:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 136
+May 29, 2025 5:46:25 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 136.0.3240.92. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.19.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you&apos;re using and the version number of the artifact is the same as Selenium&apos;s.
+</system-err>
+  </testcase>
+  <testcase classname="com.example.selenium.TCTest" name="runTCA11" time="35.008">
+    <skipped/>
+    <system-out>✅ Login successful
+✅ Bypassed warning page
+
+🔁 Retrying runTCA11 (attempt 3)
+</system-out>
+    <system-err>May 29, 2025 5:48:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 136
+May 29, 2025 5:48:22 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 136.0.3240.92. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.19.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you&apos;re using and the version number of the artifact is the same as Selenium&apos;s.
+</system-err>
+  </testcase>
+  <testcase classname="com.example.selenium.TCTest" name="runTCA11" time="50.173">
+    <failure message="Expected condition failed: waiting for presence of any elements located by By.cssSelector: a.site-menu-btn (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55746}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\QIANCH~1.JIA\AppDa...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55746/devtoo..., se:cdpVersion: 136.0.3240.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 695b5cc4f1c526550a08acfb2ab2ae09" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.cssSelector: a.site-menu-btn (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55746}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\QIANCH~1.JIA\AppDa...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55746/devtoo..., se:cdpVersion: 136.0.3240.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 695b5cc4f1c526550a08acfb2ab2ae09
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.example.selenium.setup.TCASetup.navigateToResultsByClass(TCASetup.java:14)
+	at com.example.selenium.testcases.TCA11.run(TCA11.java:21)
+	at com.example.selenium.TCTest.runTCA11(TCTest.java:40)
+</failure>
+    <system-out>✅ Login successful
+Timeout; no warning messsage page
+✅ Bypassed warning page
+
+</system-out>
+    <system-err>May 29, 2025 5:48:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 136
+May 29, 2025 5:48:57 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 136.0.3240.92. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.19.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you&apos;re using and the version number of the artifact is the same as Selenium&apos;s.
+</system-err>
+  </testcase>
+</testsuite>
