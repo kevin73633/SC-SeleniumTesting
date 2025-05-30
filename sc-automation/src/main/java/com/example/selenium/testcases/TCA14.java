@@ -22,9 +22,6 @@ public class TCA14 {
         // TCA14.1: filter by class, subject, and assessment; expand/collapse each term; input marks for each student; save marks for each term
         TCA14_1(driver, wait);
 
-        // TCA14.2: download CSV file for each term; update CSV file with remarks
-        TCA14_2(driver, wait);
-
         System.out.println("✅ TCA14 END");
     }
 
