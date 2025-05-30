@@ -8,6 +8,8 @@ import com.example.selenium.testcases.TCA16;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,13 +20,13 @@ import java.time.Duration;
 public class TCTest {
 
     private WebDriver setupDriver() {
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         HashMap<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory", "C:\\Users\\qianchen.jiang\\Downloads");
         prefs.put("download.prompt_for_download", false);
         prefs.put("safebrowsing.enabled", true);
         options.setExperimentalOption("prefs", prefs);
-        return new EdgeDriver(options);
+        return new ChromeDriver(options);
     }
 
     private void prepareEnvironment(WebDriver driver, WebDriverWait wait) throws InterruptedException {

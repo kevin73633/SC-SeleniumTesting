@@ -20,7 +20,7 @@ public class TCA11 {
         TCASetup.navigateToResultsByClass(driver, wait, "//li[contains(@class, 'ng-star-inserted')]//a[contains(text(), 'Results by Class / Teaching Group')]");
 
         //TCA11.1: filter by class, subject, and assessment; expand/collapse each term; input marks for each student; save marks for each term
-        TCA11_1(driver, wait);
+        // TCA11_1(driver, wait);
 
         //TCA11.2: download CSV file for each term; update CSV file with remarks
         TCA11_2(driver, wait);
@@ -48,6 +48,8 @@ public class TCA11 {
     }
 
     public static void TCA11_2(WebDriver driver, WebDriverWait wait) throws InterruptedException {
+        filterByClassSubjectAssessment(driver, wait);
+        
         //loop through each term in the main table
         WebElement mainTable = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main_table"))); //main table; dynamically refreshed within the function for each loop
         List<WebElement> expandCollaspeIcon = mainTable.findElements(By.tagName("svg-icon"));
