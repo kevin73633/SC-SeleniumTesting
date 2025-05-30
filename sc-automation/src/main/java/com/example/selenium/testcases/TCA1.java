@@ -45,58 +45,58 @@ public class TCA1 {
         System.out.println("All Tests Passed");
         System.out.println("✅ TCA1 END");
     }
-    public static void runTest() {
-        WebDriver driver = null;
-        try {
-            ChromeOptions options = new ChromeOptions();
-            // options.addArguments("--headless=new");
+    // public static void runTest() {
+    //     WebDriver driver = null;
+    //     try {
+    //         ChromeOptions options = new ChromeOptions();
+    //         // options.addArguments("--headless=new");
 
-            driver = new ChromeDriver(options);
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            driver.manage().window().maximize();
-            driver.get("http://predev.schoolcockpit.local.sc/academic/results-by-subject/SEC1-01");
+    //         driver = new ChromeDriver(options);
+    //         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    //         driver.manage().window().maximize();
+    //         driver.get("http://predev.schoolcockpit.local.sc/academic/results-by-subject/SEC1-01");
 
-            wait.until(ExpectedConditions.titleContains("MIMS Portal"));
+    //         wait.until(ExpectedConditions.titleContains("MIMS Portal"));
 
-            WebElement username = wait.until(ExpectedConditions.elementToBeClickable(By.id("Ecom_User_ID")));
-            WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("Ecom_Password")));
-            username.sendKeys("SCU00012@schools.gov.sg");
-            password.sendKeys("Netiq000!1234");
+    //         WebElement username = wait.until(ExpectedConditions.elementToBeClickable(By.id("Ecom_User_ID")));
+    //         WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("Ecom_Password")));
+    //         username.sendKeys("SCU00012@schools.gov.sg");
+    //         password.sendKeys("Netiq000!1234");
 
-            WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("loginButton2")));
-            loginButton.click();
+    //         WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("loginButton2")));
+    //         loginButton.click();
 
-            handleChromeInsecureFormWarning(driver, wait);
+    //         handleChromeInsecureFormWarning(driver, wait);
 
-            // Run scenarios
-            String[] scenarios = {"HDP Remarks and Conduct", "Personal Qualities", "Subject Grade", "Subject Remarks", "Subject Results"};
-            String[] lockTypes = {"By Level", "By Class"};
+    //         // Run scenarios
+    //         String[] scenarios = {"HDP Remarks and Conduct", "Personal Qualities", "Subject Grade", "Subject Remarks", "Subject Results"};
+    //         String[] lockTypes = {"By Level", "By Class"};
 
-            for (String scenario : scenarios) {
-                for (String lock : lockTypes) {
-                    TCA1_1(scenario, lock, driver, wait);
-                }
-            }
+    //         for (String scenario : scenarios) {
+    //             for (String lock : lockTypes) {
+    //                 TCA1_1(scenario, lock, driver, wait);
+    //             }
+    //         }
 
-            System.out.println("All Tests Passed");
-            breaker = true;
+    //         System.out.println("All Tests Passed");
+    //         breaker = true;
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (driver != null) driver.quit();
-        }
-    }
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //     } finally {
+    //         if (driver != null) driver.quit();
+    //     }
+    // }
 
-    public static void handleChromeInsecureFormWarning(WebDriver driver, WebDriverWait wait) {
-        try {
-            Thread.sleep(2000);
-            wait.until(ExpectedConditions.titleContains("Form is not secure"));
-            WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(By.id("proceed-button")));
-            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
-            System.out.println("Bypassed Chrome insecure form warning.");
-        } catch (Exception ignored) {}
-    }
+    // public static void handleChromeInsecureFormWarning(WebDriver driver, WebDriverWait wait) {
+    //     try {
+    //         Thread.sleep(2000);
+    //         wait.until(ExpectedConditions.titleContains("Form is not secure"));
+    //         WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(By.id("proceed-button")));
+    //         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+    //         System.out.println("Bypassed Chrome insecure form warning.");
+    //     } catch (Exception ignored) {}
+    // }
 
     public static void TCA1_1(String scenario, String lockSetup, WebDriver driver, WebDriverWait wait) throws InterruptedException {
         TCASetup.navigateToResultsByClass(driver, wait, "//li[contains(@class, 'child-module')]//a[contains(normalize-space(), 'Cut-Off')]");
