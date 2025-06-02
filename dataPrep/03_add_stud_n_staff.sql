@@ -652,7 +652,7 @@ BEGIN
         v_school := trim(TO_CHAR(v_start_sch,'9999'));
         raise notice 'LOOP 4: %', v_school;
         v_start_sch := v_start_sch + 1;
-        delete from cp01.cp_stud_attendance where schooL_code  = v_stud.school_code;
+        delete from cp01.cp_stud_attendance where schooL_code  = v_school;
         FOR v_stud IN get_stud_hist_promotion (v_school) LOOP
             raise notice 'populating cp_stud_hist_schooling for: %; from: %', v_stud.student_id, v_school;
 
