@@ -2,6 +2,7 @@ package com.example.selenium;
 
 import com.example.selenium.login.LoginUtils;
 import com.example.selenium.testcases.TCA1;
+import com.example.selenium.testcases.TCA5;
 import com.example.selenium.testcases.TCA7;
 import com.example.selenium.testcases.TCA11;
 import com.example.selenium.testcases.TCA13;
@@ -51,7 +52,6 @@ public class TCTest {
             driver.quit();
         }
     }
-    
     @Test(groups = {"tca7"}, retryAnalyzer = com.example.selenium.RetryAnalyzer.class)
     public void runTCA7() throws Exception {
         WebDriver driver = setupDriver();
@@ -67,7 +67,21 @@ public class TCTest {
             }
         }
     }
-
+    @Test(groups = {"tca5"}, retryAnalyzer = com.example.selenium.RetryAnalyzer.class)
+    public void runTCA5() throws Exception {
+        WebDriver driver = setupDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        try {
+            prepareEnvironment(driver, wait);
+            TCA5.run(driver, wait);
+        } catch (Exception e) {
+            throw new RuntimeException(e); // rethrow so RetryAnalyzer kicks in
+        } finally {
+            if (driver != null) {
+                driver.quit(); // ✅ always clean up
+            }
+        }
+    }
     @Test(groups = {"tca11"}, retryAnalyzer = com.example.selenium.RetryAnalyzer.class)
     public void runTCA11() throws Exception {
         WebDriver driver = setupDriver();
