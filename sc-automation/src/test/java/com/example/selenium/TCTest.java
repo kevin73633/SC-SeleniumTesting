@@ -2,8 +2,10 @@ package com.example.selenium;
 
 import com.example.selenium.login.LoginUtils;
 import com.example.selenium.testcases.TCA1;
+import com.example.selenium.testcases.TCA7;
 import com.example.selenium.testcases.TCA11;
 import com.example.selenium.testcases.TCA13;
+import com.example.selenium.testcases.TCA14;
 import com.example.selenium.testcases.TCA15;
 import com.example.selenium.testcases.TCA16;
 
@@ -21,13 +23,13 @@ import java.time.Duration;
 public class TCTest {
 
     private WebDriver setupDriver() {
-        ChromeOptions options = new ChromeOptions();
+        EdgeOptions options = new EdgeOptions();
         HashMap<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory", "C:\\Users\\qianchen.jiang\\Downloads");
         prefs.put("download.prompt_for_download", false);
         prefs.put("safebrowsing.enabled", true);
         options.setExperimentalOption("prefs", prefs);
-        return new ChromeDriver(options);
+        return new EdgeDriver(options);
     }
 
     private void prepareEnvironment(WebDriver driver, WebDriverWait wait) throws InterruptedException {
@@ -37,6 +39,7 @@ public class TCTest {
         LoginUtils.Login(driver, wait);
         LoginUtils.warningBypass(driver, wait);
     }
+
     @Test(groups = {"tca1"}, retryAnalyzer = com.example.selenium.RetryAnalyzer.class)
     public void runTCA1() throws Exception {
         WebDriver driver = setupDriver();
@@ -48,6 +51,23 @@ public class TCTest {
             driver.quit();
         }
     }
+    
+    @Test(groups = {"tca7"}, retryAnalyzer = com.example.selenium.RetryAnalyzer.class)
+    public void runTCA7() throws Exception {
+        WebDriver driver = setupDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        try {
+            prepareEnvironment(driver, wait);
+            TCA7.run(driver, wait);
+        } catch (Exception e) {
+            throw new RuntimeException(e); // rethrow so RetryAnalyzer kicks in
+        } finally {
+            if (driver != null) {
+                driver.quit(); // ✅ always clean up
+            }
+        }
+    }
+
     @Test(groups = {"tca11"}, retryAnalyzer = com.example.selenium.RetryAnalyzer.class)
     public void runTCA11() throws Exception {
         WebDriver driver = setupDriver();
@@ -55,8 +75,12 @@ public class TCTest {
         try {
             prepareEnvironment(driver, wait);
             TCA11.run(driver, wait);
+        } catch (Exception e) {
+            throw new RuntimeException(e); // rethrow so RetryAnalyzer kicks in
         } finally {
-            driver.quit();
+            if (driver != null) {
+                driver.quit(); // ✅ always clean up
+            }
         }
     }
 
@@ -67,6 +91,18 @@ public class TCTest {
         try {
             prepareEnvironment(driver, wait);
             TCA13.run(driver, wait);
+        } finally {
+            driver.quit();
+        }
+    }
+
+    @Test(groups = {"tca14"}, retryAnalyzer = com.example.selenium.RetryAnalyzer.class)
+    public void runTCA14() throws Exception {
+        WebDriver driver = setupDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        try {
+            prepareEnvironment(driver, wait);
+            TCA14.run(driver, wait);
         } finally {
             driver.quit();
         }

@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 public class TCA16 {
     
     public static void run(WebDriver driver, WebDriverWait wait) throws InterruptedException {
-        //navigate to results by student page
+        //navigate to results aggregated view by class
         System.out.println("TCA16 START");
         TCASetup.navigateToResultsByClass(driver, wait, "//li[contains(@class, 'ng-star-inserted')]//a[contains(text(), 'Results Aggregated View by Class')]");
 

@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 public class TCA15 {
     
     public static void run(WebDriver driver, WebDriverWait wait) throws InterruptedException {
-        //navigate to results by student page
+        //navigate to results aggregated view by class 
         System.out.println("TCA15 START");
         TCASetup.navigateToResultsByClass(driver, wait, "//li[contains(@class, 'ng-star-inserted')]//a[contains(text(), 'Results Aggregated View by Class')]");
 
@@ -68,7 +68,7 @@ public class TCA15 {
         for (int i=0; i<rows.size(); i++) {
             try {
                 actions.moveToElement(rows.get(i)).perform();
-                Thread.sleep(2000); // For visibility
+                Thread.sleep(1000); // For visibility
                 System.out.println("✅ Hovered over row " + (i + 1));
             } catch (Exception e) {
                 System.out.println("❌ Could not hover over row " + (i + 1) + ": " + e.getMessage());
