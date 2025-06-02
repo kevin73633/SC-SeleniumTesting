@@ -83,12 +83,13 @@ BEGIN
     END IF;
 
     WHILE v_start_sch <= v_end_sch LOOP
-        v_school := trim(TO_CHAR(v_start_sch,'9808'));
+        v_school := trim(TO_CHAR(v_start_sch,'9999'));
         raise notice '%', v_school;
         v_start_sch := v_start_sch + 1;
 
         v_school_name := concat_ws('',v_school ,' Secondary School S1-S5');
 
+        raise notice 'school_name: %',v_school;
         raise notice '% v_ip_dt_na_geb_school: %', v_school, v_ip_dt_na_geb_school;
         raise notice '% v_school_name: %', v_school, v_school_name;
 
@@ -2122,7 +2123,8 @@ BEGIN
             INSERT INTO cp01.cp_arch_school_transaction (school_code, academic_year, process_type_icode, process_status_icode, record_version_no, last_updated_date, updated_by_id, created_date, created_by_id, level_xcode)
             VALUES (v_school, to_char(now(), 'YYYY')::NUMERIC - 2, 'SAL', 'CF', '2', now(), 'LT_DATAPREP', now(), 'LT_DATAPREP', '43');
         END IF;
-
+        DELETE FROM cp01.cp_tt_timetable_hdr
+        WHERE school_code = v_school;
 	    INSERT INTO cp01.cp_tt_timetable_hdr(	school_code, timetable_no, start_date, version_no, cycle_days_no, created_tmt_ind, record_version_no, created_date, created_by_id, last_updated_date, updated_by_id)
 		VALUES (v_school, '1', date(concat_ws('',  TO_CHAR(now(), 'YYYY'),'-01-01')), '1','5', 'Y', 1, NOW(), 'LT_DATAPREP', NOW(), 'LT_DATAPREP');
         
@@ -2203,7 +2205,7 @@ BEGIN
 							concat_ws('', '19/11/' , v_acadYear)];
 
 	WHILE v_start_sch <= v_end_sch LOOP
-        v_school := trim(TO_CHAR(v_start_sch,'9808'));
+        v_school := trim(TO_CHAR(v_start_sch,'9999'));
         v_start_sch := v_start_sch + 1;
         raise notice 'Calendar %', v_school;
 
