@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.example.selenium.setup.TCASetup;
+import com.example.selenium.utils.FileUtils;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -71,6 +72,9 @@ public class TCA5 {
         }
         Thread.sleep(sleepduration);
         saveMarks(driver, wait);
+        Set<String> before = FileUtils.getFilesBeforeDownload();
+        WebElement downloadIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("svg-icon[icon_name='download']")));
+        downloadIcon.click();
     }
     public static void saveMarks(WebDriver driver, WebDriverWait wait) throws InterruptedException {
         WebElement searchContainer = wait.until(ExpectedConditions.elementToBeClickable(By.id("search_row")));
